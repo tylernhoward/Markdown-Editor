@@ -5,6 +5,8 @@
       <div class = "text-editor">
         <TextEditor/>
       </div>
+      <div class = "save-button">Save</div>
+
     </div>
     <footer class = "footer">
        <p>Bootstrapped quickly with Vue</p>
@@ -36,6 +38,10 @@ html {
 }
 .content {
   flex: 1 0 auto;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
 .footer {
   border-top: 1px solid lightgrey;
@@ -51,6 +57,7 @@ html {
   background-color: whitesmoke;
 }
 h1 {
+  width: 100%;
   background-color: whitesmoke;
   padding:40px;
   text-align: center;
@@ -68,8 +75,36 @@ h1 {
 }
 .text-editor{
   margin:50px;
+  margin-bottom: 20px;
   height: 100%;
+  width: auto;
+  
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+
 }
+ .save-button{
+  border: 1px solid black;
+  color:black;
+  margin-bottom: 40px;
+  width:100px;
+  padding: 5px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+}
+ .save-button:hover{
+  border: 1px solid black;
+  color:white;
+  background-color: #537699;
+}
+.save-button:active{
+    border: 1px solid black;
+  color:white;
+  background-color:#2c3e50;
+}
+
 footer img {
   height:50px;
   width:50px;

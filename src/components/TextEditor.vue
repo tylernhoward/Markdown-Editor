@@ -22,7 +22,7 @@ git clone REPO_URL
             previewStyle: 'vertical',
             height: 'auto',
             minHeight: '500px'
-      }
+      },
     }
   }
 }

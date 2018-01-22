@@ -62,6 +62,8 @@ html {
   background-color: whitesmoke;
 }
 h1 {
+  position: absolute;
+  top:0;
   width: 100%;
   background-color: whitesmoke;
   padding:40px;

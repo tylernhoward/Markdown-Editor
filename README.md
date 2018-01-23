@@ -1,21 +1,33 @@
-# markup-editor
+# Markdown Editor
 
-> A Vue.js project
+> A simple single page application to create .MD readme files for projects/repositories
 
-## Build Setup
+## Getting Started
 
-``` bash
+Quickly framed application written in Vue.js. Uses the WYSIWYG Editor: [ToastUIEditor](https://nhnent.github.io/tui.editor/) as a focal point. Application will save created README.MD file to disk
+
+### Dependencies
+
+This application relies on the following Vue plugins at the moment:
+
+* vue-gh-pages
+* vue-tui-editor
+
+### Installation
+
+- - -
+
+```
+# clone repository
+git clone https://github.com/tylernhoward/markdown-editor.git
+
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve development on localhost:8080
 npm run dev
 
-# build for production with minification
+# build for production with docs folder to be served to gh-pages
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

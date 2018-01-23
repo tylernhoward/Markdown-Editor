@@ -1,7 +1,7 @@
 <template>
   <div id="app">
+    <header class ="header">Markdown Editor</header>
     <div class = "content">
-      <h1>Markdown Editor</h1>
       <div class = "text-editor">
         <TextEditor/>
       </div>
@@ -16,7 +16,6 @@
 
 <script>
 import TextEditor from './components/TextEditor'
-
 export default {
     name: 'App',
     components: {
@@ -34,13 +33,22 @@ export default {
 html {
   height: 100%;
 }
+#app{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
 .text-editor{
   margin:50px;
   margin-bottom: 20px;
   height: 100%;
   width: 90%;
 }
-
 .content {
   flex: 1 0 auto;
   display:flex;
@@ -61,26 +69,16 @@ html {
   width:100%;
   background-color: whitesmoke;
 }
-h1 {
-  position: absolute;
-  top:0;
+.header {
   width: 100%;
   background-color: whitesmoke;
   padding:40px;
   text-align: center;
+  font-size: 20pt;
+  font-weight: bold;
+  letter-spacing: 4px;
   border-bottom: 1px solid lightgrey;
 }
-#app{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: white;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
 footer img {
   height:50px;
   width:50px;

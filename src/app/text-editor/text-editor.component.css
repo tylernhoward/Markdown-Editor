@@ -1,0 +1,37 @@
+.editor-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editor {
+  margin-bottom: 20px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.save-button {
+  border: 1px solid black;
+  color: black;
+  margin-bottom: 40px;
+  width: 100px;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.save-button:hover {
+  border: 1px solid black;
+  color: white;
+  background-color: #537699;
+}
+
+.save-button:active {
+  border: 1px solid black;
+  color: white;
+  background-color: #2c3e50;
+}

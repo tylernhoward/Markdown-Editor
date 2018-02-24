@@ -1,3 +1,4 @@
+
 html {
   height: 100%;
 }
@@ -14,46 +15,22 @@ html {
 }
 
 .text-editor {
-  margin: 50px;
-  margin-bottom: 20px;
   height: 100%;
-  width: 90%;
+  width: 100%;
 }
 
 .content {
-  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height:100%;
 }
-
-.footer {
-  border-top: 1px solid lightgrey;
-  flex-shrink: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  background-color: whitesmoke;
-}
-
 .header {
   width: 100%;
   background-color: whitesmoke;
-  padding: 40px;
-  text-align: center;
+  padding: 10px;
   font-size: 20pt;
-  font-weight: bold;
   letter-spacing: 4px;
   border-bottom: 1px solid lightgrey;
 }
 
-footer img {
-  height: 50px;
-  width: 50px;
-}

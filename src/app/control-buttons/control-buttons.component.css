@@ -1,0 +1,33 @@
+ .icon-button:hover {
+   color: gray;
+ }
+
+ .icon-button:active {
+   color: #4b96e6;
+
+
+ }
+ .list-button{
+     border: gray solid 2px;
+     padding:5px;
+     margin-bottom: 5px;
+ }
+  .list-button:hover {
+    background-color: whitesmoke;
+    border: #4b96e6 solid 2px;
+
+  }
+   .list-button:active {
+     background-color: lightgray;
+     border: #4b96e6 solid 2px;
+   }
+
+.buttons {
+    width:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.buttons .icon-button {
+    margin-right: 40px;
+}

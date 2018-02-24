@@ -11,6 +11,10 @@ import { Component, OnInit, Input } from '@angular/core';
                 flex-direction: row;
                 margin-left:50px;
                 justify-content: space-between;
+            }
+            h4 {
+                font-size: 20pt;
+                letter-spacing: 4px;
             }`]
 })
 export class HeaderComponent implements OnInit {

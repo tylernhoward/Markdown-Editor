@@ -22,6 +22,8 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "ng2-pdf-viewer": "^4.1.2",
+    "ngx-modal": "0.0.29",
     "ngx-popover": "0.0.16",
     "ngx-tui-editor": "^0.3.0",
     "rxjs": "^5.5.6",

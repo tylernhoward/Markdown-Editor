@@ -16,7 +16,7 @@ export class TextFormComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.fileName = "Readme"
+    this.fileName = "README"
     this.editorShown = true;
 
   }

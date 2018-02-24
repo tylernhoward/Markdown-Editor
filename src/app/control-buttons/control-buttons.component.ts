@@ -13,14 +13,20 @@ export class ControlButtonsComponent implements OnInit {
   textURI = null;
   fileName: string;
   filePath:string;
+  showHelp:boolean;
   constructor(private editorService: TuiService, private valueUpdater: ValueUpdaterService) { }
 
   ngOnInit() {
+    this.showHelp=false;
     this.fileName = "Readme";
     this.valueUpdater.nameObservable.subscribe(value => {
       this.fileName = value;
     });
   }
+  onHelpClose(event){
+    this.showHelp = false;
+  }
+
   openSettings() {
 
   }
@@ -36,6 +42,7 @@ export class ControlButtonsComponent implements OnInit {
   }
 
   addExtension(type){
+    this.fileName = this.fileName.split(".")[0];
     this.filePath = "";
     switch(type){
       case "html": this.filePath = this.fileName + ".html";break;

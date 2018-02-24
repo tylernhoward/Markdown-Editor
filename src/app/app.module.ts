@@ -1,3 +1,4 @@
+import { ModalModule } from 'ngx-modal';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,8 @@ import { ControlButtonsComponent } from './control-buttons/control-buttons.compo
 import { FormsModule } from '@angular/forms';
 import { ValueUpdaterService } from './services/value-updater.service';
 import { PendingChangesGuard } from './services/pending-changes.guard';
+import { HelpModalComponent } from './help-modal/help-modal.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 export const routes: Routes = [
   { path: '', component: TextEditorComponent, canDeactivate: [PendingChangesGuard] },
@@ -19,14 +22,17 @@ export const routes: Routes = [
     AppComponent,
     TextEditorComponent,
     HeaderComponent,
-    ControlButtonsComponent
-  ],
+    ControlButtonsComponent,
+    HelpModalComponent
+],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
     FormsModule,
     TuiModule,
     PopoverModule,
+    ModalModule,
+    PdfViewerModule
   ],
   providers: [ValueUpdaterService,PendingChangesGuard],
   bootstrap: [AppComponent]

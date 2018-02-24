@@ -23,6 +23,7 @@
    }
 
 .buttons {
+    font-size: 20pt;
     width:auto;
     display: flex;
     flex-direction: row;

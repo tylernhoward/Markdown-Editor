@@ -7,18 +7,27 @@
     <i class="fas fa-save"></i>
     <a #downloader></a>
   </div>
-  <div [popover]="settingsPopover" class="icon-button">
-    <i class="fas fa-cog"></i>
+  <div class="icon-button" (click)="showHelp = true">
+    <i class="fas fa-question"></i>
   </div>
+  <div [popover]="settingsPopover" class="icon-button">
+      <i class="fas fa-cog"></i>
+  </div>
+
+  <app-help-modal *ngIf="showHelp" (onClose)="onHelpClose($event)"></app-help-modal>
+
   <popover-content #savePopover title="Save file" placement="bottom" [animation]="true" [closeOnClickOutside]="true">
       <div class="list-button" (click)="save('markdown')"><i class="fas fa-download"></i>&nbsp;Markdown</div>
       <div class="list-button" (click)="save('html')"><i class="fas fa-download"></i>&nbsp;HTML</div>
   </popover-content>
+
   <popover-content #previewPopover title="Preview file" placement="bottom" [animation]="true" [closeOnClickOutside]="true">
       <div class="list-button" (click)="preview('markdown')"><i class="fas fa-external-link-alt"></i>&nbsp;Markdown</div>
       <div class="list-button" (click)="preview('html')" ><i class = "fas fa-external-link-alt"></i>&nbsp;HTML</div>
   </popover-content>
+
     <popover-content #settingsPopover title="Settings" placement="bottom" [animation]="true" [closeOnClickOutside]="true">
       <p>Coming soon..</p>
     </popover-content>
+
 </div>

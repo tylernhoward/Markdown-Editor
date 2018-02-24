@@ -1,0 +1,10 @@
+.modal-title{
+    letter-spacing: 4px;
+    font-size: 20pt;
+}
+.modal-text,.modal-text a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 12pt;
+}

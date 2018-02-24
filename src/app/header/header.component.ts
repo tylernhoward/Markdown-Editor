@@ -9,11 +9,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styles: [`.wrapper{
                 display: flex;
                 flex-direction: row;
-                margin-left:50px;
+                margin-left:40px;
                 justify-content: space-between;
             }
             h4 {
-                font-size: 20pt;
+                font-size: 16pt;
                 letter-spacing: 4px;
             }`]
 })

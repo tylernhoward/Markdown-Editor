@@ -1,0 +1,30 @@
+.file-form input {
+  border: 0;
+  border-bottom: 2px solid #4b96e6;
+  font-size: 22px;
+  line-height: 30px;
+  height: 50px;
+  text-align: center;
+  background: transparent;
+  color: #4b96e6;
+}
+
+.file-form input:focus {
+  outline: 0;
+  color: #4b96e6;
+  border-bottom: 2px solid #4b96e6;
+}
+
+.file-form small {
+    font-weight: lighter;
+}
+
+.file-form {
+  margin-left:50px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  padding-top:10px;
+  width: 20%;
+}
+

@@ -13,6 +13,7 @@ import { ValueUpdaterService } from './services/value-updater.service';
 import { PendingChangesGuard } from './services/pending-changes.guard';
 import { HelpModalComponent } from './help-modal/help-modal.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { TextFormComponent } from './text-form/text-form.component';
 
 export const routes: Routes = [
   { path: '', component: TextEditorComponent, canDeactivate: [PendingChangesGuard] },
@@ -23,7 +24,8 @@ export const routes: Routes = [
     TextEditorComponent,
     HeaderComponent,
     ControlButtonsComponent,
-    HelpModalComponent
+    HelpModalComponent,
+    TextFormComponent
 ],
   imports: [
     RouterModule.forRoot(routes),

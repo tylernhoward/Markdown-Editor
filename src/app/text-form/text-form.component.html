@@ -1,0 +1,5 @@
+<div class="file-form">
+  <small>Name:</small>
+  <input type="text" [(ngModel)]="fileName" (input)="updateFileName($event)" />
+</div>
+<app-text-editor *ngIf="editorShown" [text]="text"></app-text-editor>

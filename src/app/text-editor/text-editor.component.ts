@@ -1,6 +1,6 @@
 import { TuiService } from 'ngx-tui-editor';
 import { ValueUpdaterService } from './../services/value-updater.service';
-import { Component, OnInit, ElementRef, ChangeDetectorRef, Input, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, OnInit, ElementRef, ChangeDetectorRef, Input, Output, EventEmitter, HostListener, OnDestroy } from '@angular/core';
 import { ComponentCanDeactivate } from './../services/pending-changes.guard';
 import { Observable } from 'rxjs/Observable';
 
@@ -9,22 +9,27 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './text-editor.component.html',
   styleUrls: ['./text-editor.component.css']
 })
-export class TextEditorComponent implements OnInit, ComponentCanDeactivate {
+export class TextEditorComponent implements OnInit,OnDestroy, ComponentCanDeactivate {
   options: object
-  el:HTMLElement
-  fileName:string;
-  constructor(private cdr: ChangeDetectorRef, private editorService: TuiService, private valueUpdater: ValueUpdaterService) {}
+  height: number;
+  @Input()text: string;
+  constructor(private editorService: TuiService, private valueUpdater: ValueUpdaterService) {
+
+  }
   ngOnInit() {
-    this.fileName = "Readme"
+    this.height = window.innerHeight - 150;
     this.options = {
-            initialValue: `# Title of Project` ,
+            initialValue: this.text ? this.text : `# Title of Project` ,
             initialEditType: 'markdown',
             previewStyle: 'vertical',
             height: 'auto',
-            minHeight: "100%"
+            minHeight: this.height
           }
   }
-
+  ngOnDestroy(){
+    console.log(this.editorService.getMarkdown());
+    this.valueUpdater.emitText(this.editorService.getMarkdown());
+  }
   @HostListener('window:beforeunload')
   canDeactivate(): Observable<boolean> | boolean {
     if(this.editorService.getMarkdown() === this.options["initialValue"]){
@@ -32,10 +37,6 @@ export class TextEditorComponent implements OnInit, ComponentCanDeactivate {
     }
     else{
       return false;
-
     }
-  }
-  updateFileName(event) {
-    this.valueUpdater.emit(this.fileName);
   }
 }

@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-header',
   template: `<div class="wrapper">
-                <h4>WriteMeDown</h4>
+                <h4>Markdowner</h4>
                 <app-control-buttons></app-control-buttons>
               </div>`,
   styles: [`.wrapper{

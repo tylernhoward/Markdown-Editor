@@ -1,5 +1,5 @@
 export const initialText: string = 
-`# Welcome to WriteMeDown!
+`# Welcome to Markdowner!
 > ###### Write READMEs in Markdown
 * * *
 WriteMeDown is a WYSIWYG markdown editor written in Angular and inspired by [Dillinger](https://dillinger.io).
